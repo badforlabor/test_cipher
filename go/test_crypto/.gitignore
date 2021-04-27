@@ -1,0 +1,9 @@
+
+.idea/
+*.exe
+test*/
+
+go.sum
+
+logs/
+test.txt

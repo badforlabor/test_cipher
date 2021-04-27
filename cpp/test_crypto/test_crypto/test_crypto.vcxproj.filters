@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\cryptopp">
+      <UniqueIdentifier>{1eda721a-f6cc-4a5f-9552-62d803cae2bf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="test_crypto.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\3way.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\adler32.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\adv_simd.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\aes.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\aes_armv4.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\algebra.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\algparam.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\arc4.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\argnames.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\aria.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\arm_simd.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\asn.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\authenc.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\base32.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\base64.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\basecode.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\blake2.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\blowfish.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\blumshub.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\camellia.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\cast.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\cbcmac.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\ccm.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\chacha.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\chachapoly.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\cham.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\channels.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\cmac.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\config.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\cpu.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\crc.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\cryptlib.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\darn.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\default.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\des.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\dh.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\dh2.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\dll.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\dmac.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\donna.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\donna_32.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\donna_64.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\donna_sse.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\drbg.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\dsa.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\eax.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\ec2n.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\eccrypto.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\ecp.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\ecpoint.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\elgamal.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\emsa2.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\eprecomp.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\esign.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\factory.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\fhmqv.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\files.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\filters.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\fips140.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\fltrimpl.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\gcm.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\gf256.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\gf2n.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\gf2_32.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\gfpcrypt.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\gost.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\gzip.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\hashfwd.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\hc128.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\hc256.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\hex.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\hight.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\hkdf.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\hmac.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\hmqv.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\hrtimer.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\ida.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\idea.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\integer.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\iterhash.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\kalyna.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\keccak.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\lea.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\lubyrack.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\luc.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\mars.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\md2.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\md4.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\md5.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\mdc.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\mersenne.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\misc.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\modarith.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\modes.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\modexppc.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\mqueue.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\mqv.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\naclite.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\nbtheory.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\nr.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\oaep.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\oids.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\osrng.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\ossig.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\padlkrng.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\panama.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\pch.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\pkcspad.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\poly1305.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\polynomi.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\ppc_simd.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\pssr.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\pubkey.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\pwdbased.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\queue.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\rabbit.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\rabin.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\randpool.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\rc2.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\rc5.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\rc6.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\rdrand.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\resource.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\rijndael.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\ripemd.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\rng.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\rsa.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\rw.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\safer.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\salsa.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\scrypt.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\seal.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\secblock.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\seckey.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\seed.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\serpent.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\serpentp.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\sha.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\sha3.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\shacal2.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\shake.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\shark.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\simeck.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\simon.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\simple.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\siphash.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\skipjack.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\sm3.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\sm4.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\smartptr.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\sosemanuk.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\speck.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\square.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\stdcpp.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\strciphr.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\tea.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\threefish.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\tiger.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\trap.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\trunhash.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\ttmac.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\tweetnacl.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\twofish.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\vmac.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\wake.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\whrlpool.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\words.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\xed25519.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\xtr.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\xtrcrypt.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\zdeflate.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\zinflate.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\zlib.h">
+      <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
