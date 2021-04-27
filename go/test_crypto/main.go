@@ -27,4 +27,13 @@ func main() {
 	if e == nil {
 		fmt.Println("cbc result:", string(result))
 	}
+
+	var new, e2 = AesEncryptCBC(key, result)
+	if e2 != nil {
+		fmt.Errorf(e2.Error())
+		return
+	}
+	var newStr = base64.StdEncoding.EncodeToString(new)
+	fmt.Println("cbc encrypt result:", newStr)
+	fmt.Println("check result:", newStr == str)
 }
