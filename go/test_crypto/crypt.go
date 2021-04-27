@@ -14,10 +14,10 @@ import (
 
 func GenKey(key string) []byte {
 	var ret = []byte(key)
-	for len(ret) % 16 != 0 {
+	for len(ret) < 16  {
 		ret = append(ret, 0)
 	}
-	return ret
+	return ret[0:16]
 }
 
 func AesEncryptCFB(key, data []byte) ([]byte, error) {
