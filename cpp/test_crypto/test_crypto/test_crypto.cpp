@@ -11,9 +11,44 @@
 #include "cryptopp/osrng.h"
 #include "cryptopp/hex.h"
 #include "cryptopp/base64.h"
+#include "cryptopp/rsa.h"
+#include "cryptopp/pem.h"
 
 using namespace std;
 using namespace CryptoPP;
+
+std::string ToBase64(const std::string cipher)
+{
+	Base64Encoder encoder;
+	encoder.Put((const byte*)&cipher[0], cipher.size());
+	encoder.MessageEnd();
+
+	string encoded;
+	word64 size = encoder.MaxRetrievable();
+	if (size)
+	{
+		encoded.resize(size);
+		encoder.Get((byte*)&encoded[0], encoded.size());
+	}
+
+	return encoded;
+}
+std::string FromBase64(const std::string cipher)
+{
+	Base64Decoder encoder;
+	encoder.Put((const byte*)&cipher[0], cipher.size());
+	encoder.MessageEnd();
+
+	string encoded;
+	word64 size = encoder.MaxRetrievable();
+	if (size)
+	{
+		encoded.resize(size);
+		encoder.Get((byte*)&encoded[0], encoded.size());
+	}
+
+	return encoded;
+}
 
 
 void TestAES()
@@ -65,17 +100,7 @@ void TestAES()
 	std::cout << std::endl;
 
 	{
-		Base64Encoder encoder;
-		encoder.Put((const byte*)&cipher[0], cipher.size());
-		encoder.MessageEnd();
-
-		string encoded;
-		word64 size = encoder.MaxRetrievable();
-		if (size)
-		{
-			encoded.resize(size);
-			encoder.Get((byte*)&encoded[0], encoded.size());
-		}
+		string encoded = ToBase64(cipher);
 
 		std::cout << "cipher text(base64):" << encoded << std::endl;
 	}
@@ -93,6 +118,85 @@ void TestAES()
 		std::cout << "recovered text: " << recovered << std::endl;
 	}
 }
+template <typename Key>
+const Key loadKey(const std::string& filename)
+{
+	Key key;
+	CryptoPP::ByteQueue queue;
+	CryptoPP::FileSource file(filename.c_str(), true);
+	file.TransferTo(queue);
+	queue.MessageEnd();
+
+	key.Load(queue);
+	return key;
+}
+template <typename Key>
+const Key loadRawKey(const std::string& str)
+{
+	Key key;
+	CryptoPP::ByteQueue queue;
+	queue.Put((const byte*)&str[0], str.size());
+	queue.MessageEnd();
+
+	key.Load(queue);
+	return key;
+}
+
+void loadPem()
+{
+	FileSource fs1("rsa-pub.pem", true);
+	RSA::PublicKey k1;
+	PEM_Load(fs1, k1);
+}
+
+void TestRSA()
+{
+	std::string privateKeyName, publicKeyName, plainText;
+
+	privateKeyName = "key8.pem";
+	publicKeyName = "key8.pub";
+	plainText = "RSA Test.";
+
+	AutoSeededRandomPool prng;
+
+	RSA::PrivateKey privateKey;
+	RSA::PublicKey publicKey;
+	{
+		FileSource fs1(publicKeyName.c_str(), true);
+		PEM_Load(fs1, publicKey);
+	}
+	{
+		FileSource fs1(privateKeyName.c_str(), true);
+		PEM_Load(fs1, privateKey);
+	}
+	
+	std::string encrypted, decrypted;
+	RSAES_PKCS1v15_Encryptor e(publicKey);
+
+	StringSource(plainText, true,
+		new PK_EncryptorFilter(prng, e,
+			new StringSink(encrypted)));
+
+	RSAES_PKCS1v15_Decryptor d(privateKey);
+
+	StringSource(encrypted, true,
+		new PK_DecryptorFilter(prng, d,
+			new StringSink(decrypted)));
+
+	std::cout << plainText << " ---> " << ToBase64(encrypted) << " <--- " << decrypted << std::endl;
+
+	// 解谜go中的
+	{
+		auto base64 = "cPfoLi14lnpikk9irvyeAdXUka/NzOmikABAaY1WGi+Uopi48V2PKvKVx1N4NbOBuxphmtZumIIF/6M4OiTX901gI08JkRQqDCc4umM52dRF4I7xvc+v/z+Kx1ozptSJ0CwrLNQZoWYLEbVOKwl5wpJxYKYZXdYVWEpVP+tTkBO0UNjhfYY3lzMSMwkE1KP5			hFU9yDTavy4x3FliL4nYOk59znwTVNbj1Gy + AQf9eik5WbJfWEIGOCM + UJwHBis7z5SVhBoj5kPS90Su4nUnjYsaEjT4GMo1fCT5HFv9 + Xdzmvc3mdxi1jZbj7KyvV18XuryPzj7F2KvV + B / koekXg ==";
+		auto encrypted2 = FromBase64(base64);
+
+		std::string decrypted2;
+		StringSource(encrypted2, true,
+			new PK_DecryptorFilter(prng, d,
+				new StringSink(decrypted2)));
+		std::cout << decrypted2 << std::endl;
+	}
+}
 
 int main()
 {
@@ -105,6 +209,8 @@ int main()
 	cout << "block size: " << AES::BLOCKSIZE << endl;
 
 	TestAES();
+
+	TestRSA();
 
 	cout << "end..." << endl;
 }

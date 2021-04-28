@@ -286,6 +286,9 @@
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="pem_common.cpp" />
+    <ClCompile Include="pem_read.cpp" />
+    <ClCompile Include="pem_write.cpp" />
     <ClCompile Include="pkcspad.cpp" />
     <ClCompile Include="poly1305.cpp" />
     <ClCompile Include="polynomi.cpp" />
@@ -346,6 +349,7 @@
     <ClCompile Include="vmac.cpp" />
     <ClCompile Include="wake.cpp" />
     <ClCompile Include="whrlpool.cpp" />
+    <ClCompile Include="x509cert.cpp" />
     <ClCompile Include="xed25519.cpp" />
     <ClCompile Include="xtr.cpp" />
     <ClCompile Include="xtrcrypt.cpp" />
