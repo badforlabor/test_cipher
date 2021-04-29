@@ -13,11 +13,14 @@ import (
 )
 
 func GenKey(key string) []byte {
+	return GenKeyCommon(key, 16, 0)
+}
+func GenKeyCommon(key string, size int, c byte) []byte {
 	var ret = []byte(key)
-	for len(ret) < 16  {
-		ret = append(ret, 0)
+	for len(ret) < size  {
+		ret = append(ret, c)
 	}
-	return ret[0:16]
+	return ret[0:size]
 }
 
 func AesEncryptCFB(key, data []byte) ([]byte, error) {
@@ -64,14 +67,18 @@ func AesDecryptCFB(key, src []byte) (strDesc []byte, err error) {
 
 // =================== ECB ======================
 func AesEncryptECB(key, origData []byte) (encrypted []byte, err error) {
-	cipher, _ := aes.NewCipher(generateKey(key))
-	length := (len(origData) + aes.BlockSize) / aes.BlockSize
-	plain := make([]byte, length*aes.BlockSize)
-	copy(plain, origData)
-	pad := byte(len(plain) - len(origData))
-	for i := len(origData); i < len(plain); i++ {
-		plain[i] = pad
+	cipher, e := aes.NewCipher(key)
+	if e != nil {
+		return nil, e
 	}
+
+	plain := pkcs7Padding(origData, aes.BlockSize)
+
+	//copy(plain, origData)
+	//pad := byte(len(plain) - len(origData))
+	//for i := len(origData); i < len(plain); i++ {
+	//	plain[i] = pad
+	//}
 	encrypted = make([]byte, len(plain))
 	// 分组分块加密
 	for bs, be := 0, cipher.BlockSize(); bs <= len(origData); bs, be = bs+cipher.BlockSize(), be+cipher.BlockSize() {
@@ -81,29 +88,19 @@ func AesEncryptECB(key, origData []byte) (encrypted []byte, err error) {
 	return encrypted, nil
 }
 func AesDecryptECB(key, encrypted []byte) (decrypted []byte, err error) {
-	cipher, _ := aes.NewCipher(generateKey(key))
+	cipher, e := aes.NewCipher(key)
+	if e != nil {
+		return nil, e
+	}
 	decrypted = make([]byte, len(encrypted))
 	//
 	for bs, be := 0, cipher.BlockSize(); bs < len(encrypted); bs, be = bs+cipher.BlockSize(), be+cipher.BlockSize() {
 		cipher.Decrypt(decrypted[bs:be], encrypted[bs:be])
 	}
 
-	trim := 0
-	if len(decrypted) > 0 {
-		trim = len(decrypted) - int(decrypted[len(decrypted)-1])
-	}
+	decrypted = pkcs7UnPadding(decrypted)                       // 去除补全码
 
-	return decrypted[:trim],nil
-}
-func generateKey(key []byte) (genKey []byte) {
-	genKey = make([]byte, 16)
-	copy(genKey, key)
-	for i := 16; i < len(key); {
-		for j := 0; j < 16 && i < len(key); j, i = j+1, i+1 {
-			genKey[j] ^= key[i]
-		}
-	}
-	return genKey
+	return decrypted,nil
 }
 
 // =================== CBC ======================

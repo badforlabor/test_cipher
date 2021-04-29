@@ -155,7 +155,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="aes.cpp" />
     <ClCompile Include="test_crypto.cpp" />
+    <ClCompile Include="util.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\3way.h" />
@@ -331,6 +333,7 @@
     <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\zdeflate.h" />
     <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\zinflate.h" />
     <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\zlib.h" />
+    <ClInclude Include="util.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

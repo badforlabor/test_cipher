@@ -20,6 +20,7 @@ func main() {
 	GenRsaKey()
 
 	testAES()
+	testAES_ECB()
 	testRSA()
 	testRSA8()
 }
@@ -49,6 +50,39 @@ func testAES() {
 	}
 	var newStr = base64.StdEncoding.EncodeToString(new)
 	fmt.Println("cbc encrypt result:", newStr)
+	fmt.Println("check result:", newStr == str)
+}
+
+func testAES_ECB() {
+
+	var key = GenKeyCommon("123456", 32, '0')
+	var plain = "ECB Mode Test"
+
+	var new, e2 = AesEncryptECB(key, []byte(plain))
+	if e2 != nil {
+		fmt.Errorf(e2.Error())
+		return
+	}
+	//var result, e = Decrypt(str, []byte(key), []byte(key))
+
+	var str = ToBase64(new)
+
+	fmt.Println("ecb, plain:", plain)
+	fmt.Println("ecb, result:", str)
+
+	origData,err := base64.StdEncoding.DecodeString(str)
+	if err != nil {
+		fmt.Errorf(err.Error())
+		return
+	}
+
+	var result, e = AesDecryptECB([]byte(key), origData)
+	if e == nil {
+		fmt.Println("ecb result:", string(result))
+	}
+
+	var newStr = base64.StdEncoding.EncodeToString(new)
+
 	fmt.Println("check result:", newStr == str)
 }
 

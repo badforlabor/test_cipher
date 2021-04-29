@@ -17,38 +17,8 @@
 using namespace std;
 using namespace CryptoPP;
 
-std::string ToBase64(const std::string cipher)
-{
-	Base64Encoder encoder;
-	encoder.Put((const byte*)&cipher[0], cipher.size());
-	encoder.MessageEnd();
+#include "util.h"
 
-	string encoded;
-	word64 size = encoder.MaxRetrievable();
-	if (size)
-	{
-		encoded.resize(size);
-		encoder.Get((byte*)&encoded[0], encoded.size());
-	}
-
-	return encoded;
-}
-std::string FromBase64(const std::string cipher)
-{
-	Base64Decoder encoder;
-	encoder.Put((const byte*)&cipher[0], cipher.size());
-	encoder.MessageEnd();
-
-	string encoded;
-	word64 size = encoder.MaxRetrievable();
-	if (size)
-	{
-		encoded.resize(size);
-		encoder.Get((byte*)&encoded[0], encoded.size());
-	}
-
-	return encoded;
-}
 
 
 void TestAES()
@@ -209,6 +179,9 @@ int main()
 	cout << "block size: " << AES::BLOCKSIZE << endl;
 
 	TestAES();
+
+	extern void TestAES_ECB();
+	TestAES_ECB();
 
 	TestRSA();
 

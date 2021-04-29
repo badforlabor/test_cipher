@@ -21,6 +21,12 @@
     <ClCompile Include="test_crypto.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="aes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\3way.h">
@@ -541,6 +547,9 @@
     </ClInclude>
     <ClInclude Include="..\ThirdParty\cryptopp_x64-windows\include\cryptopp\zlib.h">
       <Filter>Header Files\cryptopp</Filter>
+    </ClInclude>
+    <ClInclude Include="util.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
